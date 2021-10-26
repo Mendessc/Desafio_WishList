@@ -1,4 +1,4 @@
-Use WishList;
+Use WishList_T;
 Go
 
 Select *From usuarios;

@@ -1,7 +1,7 @@
-CREATE database WishList;
+CREATE database WishList_T;
 Go
 
-Use WishList;
+Use WishList_T;
 Go
 
 Create table Usuarios(
@@ -14,6 +14,8 @@ Go
 Create table Desejos(
 	idDesejo smallint primary key identity,
 	descricao varchar(200),
-	idUsuaio int Foreign Key references  Usuarios(idUsuario)
+	idUsuario int Foreign Key references  Usuarios(idUsuario)
 );
 Go
+
+DROP DATABASE WishList_T
