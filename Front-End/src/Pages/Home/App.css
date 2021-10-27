@@ -7,11 +7,9 @@
   box-sizing: border-box;
 }
 
-main {
+.background{
   background-image: url(../img/wishlist);
   background-size: cover;
-  min-height: 100vh;
-
 }
 
 .container{
@@ -90,7 +88,8 @@ main {
 .btn-enviar{
   width: 275px;
   height: 50px;
-  margin-top: 60px;
+  margin: 60px 0;
+  
 
   font-size: 31px;
   font-family: 'Quintessential', cursive;
@@ -101,14 +100,17 @@ main {
   align-items: center;
   justify-content: center;
 }
+.btn-enviar:hover{
+  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 20%, rgba(255, 255, 255, 1) 100%), #B520FB;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
 .container-desejos{
-  margin: 60px 0;
-  
+  padding: 35px 0 ;
 }
 .box-desejos{
   background-color: rgba(255, 255, 255, 0.6);
   height: 159px;
-  margin: 30px 0;
   border-radius: 10px;
   display: flex;
   padding: 35px;

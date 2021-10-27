@@ -43,7 +43,7 @@ export default class Home extends Component {
     fetch('http://localhost:5000/api/Desejos', {
 
       method: 'POST',
-      body: JSON.stringify({ desejo: this.state.descricao }),
+      body: JSON.stringify({ idUsuario: this.state.idUsuario, descricao: this.state.descricao }),
       headers: { "Content-Type": "application/json" }
     })
       .then(console.log("Desejo cadastrado."))
@@ -57,12 +57,12 @@ export default class Home extends Component {
 
   limparCampos = () => {
     this.setState({
-        descricao : '',
-        idDesejoAlterado : 0
+      descricao: '',
+      idUsuario: ''
     })
     // Exibe no console do navegador a mensagem abaixo
     console.log('Os states foram resetados!')
-};
+  };
 
 
 
@@ -70,40 +70,41 @@ export default class Home extends Component {
   render() {
     return (
       <main>
-        <div className="container">
-          <div className="box-titulo">
-            <h1 className="titulo" >
-              lista de desejos
-            </h1>
-            <span className="slogan">crie seu proprio desejo</span>
-          </div>
+        <div className="background">
+          <div className="container">
+            <div className="box-titulo">
+              <h1 className="titulo" >
+                lista de desejos
+              </h1>
+              <span className="slogan">crie seu proprio desejo</span>
+            </div>
 
-          <form onSubmit={this.cadastrarDesejo}>
-            <div className="box-text">
-              <textarea className="digite-nome" placeholder="Digite seu ID" value={this.state.idUsuario} onChange={this.atualizarID}></textarea>
-              <textarea type="text" className="digite-desejo" placeholder="Digite seu desejo" value={this.state.descricao} onChange={this.atualizarID}></textarea>
-            </div>
-            <div className="box-enviar">
-              <button className="btn-enviar" type="submit">Cadastrar</button>
-            </div>
-          </form>
-          {
-            this.state.listaDesejos.map((retorno) => {
-              return (
-                <section className="container-desejos">
-                  <div className="box-desejos">
-                    <div className="box-informacao">
-                      <span className="span-desejo">ID:{retorno.idUsuario}</span>
+            <form onSubmit={this.cadastrarDesejo}>
+              <div className="box-text">
+                <textarea className="digite-nome" placeholder="Digite seu ID" value={this.state.idUsuario} onChange={this.atualizarID}></textarea>
+                <textarea className="digite-desejo" placeholder="Digite seu desejo" value={this.state.descricao} onChange={this.atualizarDesejo}></textarea>
+              </div>
+              <div className="box-enviar">
+                <button className="btn-enviar" type="submit">Cadastrar</button>
+              </div>
+            </form>
+            {
+              this.state.listaDesejos.map((retorno) => {
+                return (
+                  <section className="container-desejos">
+                    <div className="box-desejos">
+                      <div className="box-informacao">
+                        <span className="span-desejo">ID: {retorno.idUsuario}</span>
+                      </div>
+                      <div className="box-desejo">
+                        <span className="span-desejo">Desejo: {retorno.descricao}</span>
+                      </div>
                     </div>
-                    <div className="box-desejo">
-                      <span className="span-desejo">Desejo:{retorno.descricao}</span>
-                      <p></p>
-                    </div>
-                  </div>
-                </section>
-              )
-            })
-          }
+                  </section>
+                )
+              })
+            }
+          </div>
         </div>
       </main>
     )

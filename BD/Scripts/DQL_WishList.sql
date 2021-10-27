@@ -8,4 +8,4 @@ Select * From Desejos;
 Go
 
 Delete From Desejos
-where idDesejo = 29
+where idDesejo = 35
