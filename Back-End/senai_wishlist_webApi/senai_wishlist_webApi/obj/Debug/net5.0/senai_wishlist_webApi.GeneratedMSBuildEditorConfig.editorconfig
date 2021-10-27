@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = senai_wishlist_webApi
-build_property.ProjectDir = C:\Users\47026404881\Documents\Desafio_WishList\Back-End\senai_wishlist_webApi\senai_wishlist_webApi\
+build_property.ProjectDir = C:\Users\theus\OneDrive\Documentos\Desafio_WishList\Back-End\senai_wishlist_webApi\senai_wishlist_webApi\

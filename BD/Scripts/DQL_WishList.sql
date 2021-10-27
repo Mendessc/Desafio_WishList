@@ -6,3 +6,6 @@ Go
 
 Select * From Desejos;
 Go
+
+Delete From Desejos
+where idDesejo = 29

@@ -6,8 +6,8 @@ import { Route, BrowserRouter as Router, Redirect ,Switch } from 'react-router-d
 import './index.css';
 
 
-import Home from './pages/Home/App';
-import NotFound from './pages/NotFound/NotFound';
+import Home from './Pages/Home/App';
+import NotFound from './Pages/NotFound/NotFound';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -26,9 +26,7 @@ const routing = (
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 

@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+main {
+  background-image: url(../img/wishlist);
+  background-size: cover;
   min-height: 100vh;
+
+}
+
+.container{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.box-titulo{
   display: flex;
+  margin: 0; 
+  height: 350px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+
+}
+
+.titulo {
+  font-family: 'Quintessential', cursive;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #fff; 
+  text-shadow: #000 -5px 6px;
+}
+.slogan{
+  font-family: 'Quintessential', cursive;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: #fff; 
+  margin-top: 40px;
+  text-shadow: #000 -4px 2px;
+
+}
+.box-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 140px;
+}
+
+
+.digite-nome{
+  border-radius: 7px;
+  background-color: #c4c4c4;
+  width: 375px;
+  height: 35px;
+  resize: none;
+  overflow: auto;
+
+  padding-left: 20px;
+  
+  font-family: 'Quintessential', cursive;
+  font-size: 18px;
+  text-decoration-color: #000;
+  text-transform: capitalize
+}
+.digite-desejo{
+  border-radius: 7px;
+  background-color: #c4c4c4;
+  width: 375px;
+  height: 35px;
+  resize: none;
+  overflow: auto;
+
+  padding-left: 20px;
+  
+  font-family: 'Quintessential', cursive;
+  font-size: 18px;
+  text-decoration-color: #000;
+  text-transform: capitalize
+}
+.box-enviar{
+  display: flex;
+  justify-content: center;
+}
+.btn-enviar{
+  width: 275px;
+  height: 50px;
+  margin-top: 60px;
+
+  font-size: 31px;
+  font-family: 'Quintessential', cursive;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #B520FB;
+  border-radius: 10px;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container-desejos{
+  margin: 60px 0;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-desejos{
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 159px;
+  margin: 30px 0;
+  border-radius: 10px;
+  display: flex;
+  padding: 35px;
+}
+.span-desejo{
+  color: #fff;
+  font-family: 'Quintessential', cursive;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.box-informacao{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.box-desejo{
+  display: flex;
+  flex-direction: row;
+  
 }
